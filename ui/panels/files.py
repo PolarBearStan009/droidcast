@@ -20,7 +20,7 @@ class FilesPanel(QWidget):
         super().__init__()
         self.adb = adb
         self._serial = ''
-        self._path = '/sdcard'
+        self._path = '/storage/emulated/0'
         self._history: list[str] = []
         self._build_ui()
 
@@ -48,7 +48,7 @@ class FilesPanel(QWidget):
         self.back_btn = QPushButton('← Back')
         self.back_btn.setEnabled(False)
         self.back_btn.clicked.connect(self._go_back)
-        self.path_label = QLabel('/sdcard')
+        self.path_label = QLabel('/storage/emulated/0')
         self.path_label.setObjectName('status-dim')
         self.refresh_btn = QPushButton('⟳')
         self.refresh_btn.setFixedWidth(36)

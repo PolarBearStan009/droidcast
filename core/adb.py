@@ -121,14 +121,17 @@ class ADB:
                 continue
             perms = parts[0]
             raw_name = parts[-1]
+            # Strip symlink target (name -> target)
             name = raw_name.split('->')[0].strip() if '->' in raw_name else raw_name
-            if name in ('.', '..'):
+            # Drop entries that are absolute paths or empty (e.g. ls reporting the dir itself)
+            if not name or name in ('.', '..') or name.startswith('/'):
                 continue
             try:
                 size = int(parts[4])
             except (ValueError, IndexError):
                 size = 0
-            entries.append({'name': name, 'is_dir': perms.startswith('d'), 'size': size})
+            is_dir = perms.startswith('d') or perms.startswith('l')
+            entries.append({'name': name, 'is_dir': is_dir, 'size': size})
         return sorted(entries, key=lambda x: (not x['is_dir'], x['name'].lower()))
 
     def delete(self, serial: str, path: str) -> bool:
