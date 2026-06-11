@@ -57,7 +57,7 @@ A lightweight desktop app to mirror your Android device over USB (or WiFi), cont
 brew install scrcpy ffmpeg
 
 # 3. Clone the repo
-git clone https://github.com/YOUR_USERNAME/droidcast.git
+git clone https://github.com/PolarBearStan009/droidcast.git
 cd droidcast
 
 # 4. Install Python dependencies
@@ -88,7 +88,7 @@ Download from [python.org/downloads](https://python.org/downloads). Make sure to
 **4. Clone and run**
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/droidcast.git
+git clone https://github.com/PolarBearStan009/droidcast.git
 cd droidcast
 pip install -r requirements.txt
 python main.py
@@ -104,7 +104,7 @@ sudo apt update
 sudo apt install -y scrcpy ffmpeg python3 python3-pip
 
 # 2. Clone the repo
-git clone https://github.com/YOUR_USERNAME/droidcast.git
+git clone https://github.com/PolarBearStan009/droidcast.git
 cd droidcast
 
 # 3. Install Python dependencies
