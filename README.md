@@ -248,6 +248,6 @@ Click **Test All Tools** to verify that adb, scrcpy, and ffmpeg are all found co
 
 ## License
 
-MIT © [Your Name](https://github.com/YOUR_USERNAME)
+MIT © [@glaive](https://github.com/PolarBearStan009)
 
 Built on top of [scrcpy](https://github.com/Genymobile/scrcpy) by Genymobile — the real MVP.
